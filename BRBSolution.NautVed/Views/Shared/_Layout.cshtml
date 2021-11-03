@@ -1,35 +1,50 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <title>@ViewData["Title"] - BRBSolution.NautVed</title>
     <meta charset="UTF-8" />
     <title>Industrio - Responsive HTML 5 template</title>
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="img/favicon/manifest.json">
+    <link rel="apple-touch-icon" sizes="57x57" href="@Url.Content("~/img/favicon/apple-icon-57x57.png")" />
+    <link rel="apple-touch-icon" sizes="60x60" href="@Url.Content("~/img/favicon/apple-icon-60x60.png")" />
+    <link rel="apple-touch-icon" sizes="72x72" href="@Url.Content("~/img/favicon/apple-icon-72x72.png")" />
+    <link rel="apple-touch-icon" sizes="76x76" href="@Url.Content("~/img/favicon/apple-icon-76x76.png")" />
+    <link rel="apple-touch-icon" sizes="114x114" href="@Url.Content("~/img/favicon/apple-icon-114x114.png")" />
+    <link rel="apple-touch-icon" sizes="120x120" href="@Url.Content("~/img/favicon/apple-icon-120x120.png")" />
+    <link rel="apple-touch-icon" sizes="144x144" href="@Url.Content("~/img/favicon/apple-icon-144x144.png")" />
+    <link rel="apple-touch-icon" sizes="152x152" href="@Url.Content("~/img/favicon/apple-icon-152x152.png")" />
+    <link rel="apple-touch-icon" sizes="180x180" href="@Url.Content("~/img/favicon/apple-icon-180x180.png")" />
+    <link rel="icon" type="image/png" sizes="192x192" href="@Url.Content("~/img/favicon/android-icon-192x192.png")" />
+    <link rel="icon" type="image/png" sizes="32x32" href="@Url.Content("~/img/favicon/favicon-32x32.png")" />
+    <link rel="icon" type="image/png" sizes="96x96" href="@Url.Content("~/img/favicon/favicon-96x96.png")" />
+    <link rel="icon" type="image/png" sizes="16x16" href="@Url.Content("~/img/favicon/favicon-16x16.png")" />
+    <link rel="manifest" href="@Url.Content("~/img/favicon/manifest.json")">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-
-    <link href="plugins/revolution/css/settings.css" rel="stylesheet">
-    <link href="plugins/revolution/css/layers.css" rel="stylesheet">
-    <link href="plugins/revolution/css/navigation.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link href="@Url.Content("~/img/favicon/android-icon-192x192.png") " sizes="192x192" rel="icon" type="image/png" />
+    <link href="@Url.Content("~/img/favicon/apple-96x96.png") " sizes="96x96" rel="icon" type="image/png" />
+    <link href="@Url.Content("~/img/favicon/apple-32x32.png") " sizes="32x32" rel="icon" type="image/png" />
+    <link href="@Url.Content("~/img/favicon/apple-icon-192x192.png") " sizes="192x192" rel="icon" type="image/png" />
+    <link href="@Url.Content("~/img/favicon/apple-icon-180x180.png") " sizes="180x180" rel="apple-touch-icon" />
+    <link href="@Url.Content("~/img/favicon/apple-icon-152x152.png") " sizes="152x152" rel="apple-touch-icon" />
+    <link href="@Url.Content("~/img/favicon/apple-icon-144x144.png") " sizes="144x144" rel="apple-touch-icon" />
+    <link href="@Url.Content("~/img/favicon/apple-icon-120x120.png") " sizes="120x120" rel="apple-touch-icon" />
+    <link href="@Url.Content("~/img/favicon/apple-icon-114x114.png") " sizes="114x114" rel="apple-touch-icon" />
+    <link href="@Url.Content("~/img/favicon/apple-icon-76x76.png") " sizes="76x76" rel="apple-touch-icon" />
+    <link href="@Url.Content("~/img/favicon/apple-icon-72x72.png") " sizes="72x72" rel="apple-touch-icon" />
+    <link href="@Url.Content("~/img/favicon/apple-icon-120x120.png") " sizes="60x60" rel="apple-touch-icon" />
+    <link href="@Url.Content("~/img/favicon/apple-icon-114x114.png")" sizes="57x57" rel="apple-touch-icon" />
+    <link href="@Url.Content("~/css/bootstrap.min.css" )" rel="stylesheet" />
+    <link href="@Url.Content("~/css/bootstrap-select.min.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/css/animate.min.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/plugins/revolution/css/settings.css")" rel="stylesheet">
+    <link href="@Url.Content("~/plugins/revolution/css/settings.css")" rel="stylesheet">
+    <link href="@Url.Content("~/plugins/revolution/css/layers.css")" rel="stylesheet">
+    <link href="@Url.Content("~/plugins/revolution/css/navigation.css")" rel="stylesheet">
+    <link rel="stylesheet" href="@Url.Content("~/css/style.css")">
+    <link rel="stylesheet" href="@Url.Content("~/css/responsive.css")">
 </head>
 <body>
     <div class="preloader"><div class="spinner"></div></div>
@@ -37,8 +52,8 @@
         <div class="header-top home-one clearfix">
             <div class="container">
                 <div class="logo pull-left">
-                    <a href="index.html"><img src="img/logo1-1.png" alt="Awesome Image" /></a>
-                </div><!-- /.logo -->
+                    <a><img src="@Url.Content("~/img/logo2-1.png")" alt="Awesome Image" style="width:120px; height:60px;" /></a>
+                </div>
                 <div class="header-right-info pull-right">
                     <div class="single-header-right-info">
                         <div class="icon-box">
@@ -67,12 +82,14 @@
                             <h3>support@gmail.com</h3>
                         </div><!-- /.text-box -->
                     </div><!-- /.single-header-right-info -->
-                </div><!-- /.header-right-info -->
+                </div>
             </div><!-- /.container -->
         </div>
         <header class="header header-home-one clearfix">
             <nav class="navbar navbar-default header-navigation stricky clearfix">
                 <div class="container clearfix">
+
+
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
                         <button class="side-nav-toggler side-nav-opener"><i class="fa fa-bars"></i></button>
@@ -83,16 +100,12 @@
 
                         <ul class="nav navbar-nav navigation-box">
                             <li class="current">
-                                <a href="index.html">Home</a>
-                                <ul class="sub-menu">
-                                    <li><a href="index.html">Home Page One</a></li>
-                                    <li><a href="index2.html">Home Page Two</a></li>
-                                    <li><a href="index3.html">Home Page Three</a></li>
-                                </ul><!-- /.sub-menu -->
+                                <a href="@Url.Action("Index","Home")">Home</a>
+                                <!-- /.sub-menu -->
                             </li>
-                            <li> <a href="about.html">About Us</a> </li>
+                            <li> <a href="@Url.Action("Index","About")">Sobre nós</a> </li>
                             <li>
-                                <a href="service.html">Services</a>
+                                <a href="@Url.Action("Index","Service")">Serviços</a>
                                 <ul class="sub-menu">
                                     <li> <a href="single-service.html">Chemical Research</a> </li>
                                     <li><a href="single-service.html">Fuel & Gas Management</a></li>
@@ -100,33 +113,15 @@
                                     <li><a href="single-service.html">Mechanical Engineering</a></li>
                                     <li><a href="single-service.html">Petroleum Refinery</a></li>
                                     <li><a href="single-service.html">Power & Energy Sector</a></li>
-                                </ul><!-- /.sub-menu -->
+                                </ul>
                             </li>
                             <li>
-                                <a href="project.html">Projects</a>
+                                <a href="@Url.Action("Index","Project")">Projetos</a>
                                 <ul class="sub-menu">
                                     <li> <a href="single-project.html">Project Details</a> </li>
                                 </ul><!-- /.sub-menu -->
                             </li>
-                            <li>
-                                <a href="#">Pages</a>
-                                <ul class="sub-menu">
-                                    <li> <a href="404.html">Error 404</a> </li>
-                                    <li> <a href="coming-soon.html">Coming Soon</a> </li>
-                                    <li> <a href="project.html">Projects</a> </li>
-                                    <li> <a href="single-project.html">Project Details</a> </li>
-                                    <li><a href="team.html">Team</a></li>
-                                    <li><a href="testimonials.html">Testimonials</a></li>
-                                </ul><!-- /.sub-menu -->
-                            </li>
-                            <li>
-                                <a href="blog.html">Blog</a>
-                                <ul class="sub-menu">
-                                    <li><a href="blog.html">Blog Classic</a></li>
-                                    <li><a href="blog-details.html">Blog Details</a></li>
-                                </ul><!-- /.sub-menu -->
-                            </li>
-                            <li> <a href="contact.html">Contact Us</a> </li>
+                            <li> <a href="@Url.Action("Index","Contact")">Contatos</a> </li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                     <div class="right-side-box">
@@ -148,12 +143,11 @@
         <div class="main-footer">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3 col-sm-6 col-xs-12">
+                    <!--<div class="col-md-3 col-sm-6 col-xs-12">
                         <div class="footer-widget about-widget">
-                            <a href="index.html"><img src="img/logo2-1.png" alt="Awesome Image" /></a>
                             <h3>About us</h3>
                             <p>Many of our SELC registered employees are requested as main preferred temporary staff when a service.</p>
-                        </div><!-- /.footer-widget about-widget -->
+                        </div>--><!-- /.footer-widget about-widget -->
                     </div><!-- /.col-md-3 -->
                     <div class="col-md-2 col-sm-6 col-xs-12">
                         <div class="footer-widget links-widget">
@@ -162,19 +156,17 @@
                             </div><!-- /.title -->
                             <ul class="links-list">
                                 <li><a href="#">Home</a></li>
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Services</a></li>
-                                <li><a href="#">Project</a></li>
-                                <li><a href="#">Pages</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">Sobre nós</a></li>
+                                <li><a href="#">Serviços</a></li>
+                                <li><a href="#">Projetos</a></li>
+                                <li><a href="#">Contatos</a></li>
                             </ul><!-- /.links-list -->
                         </div><!-- /.footer-widget links-widget -->
                     </div><!-- /.col-md-2 -->
                     <div class="col-md-3 col-sm-6 col-xs-12">
                         <div class="footer-widget services-widget">
                             <div class="title">
-                                <h3>Services</h3>
+                                <h3>Serviços</h3>
                             </div><!-- /.title -->
                             <ul class="links-list">
                                 <li><a href="#">Engineering</a></li>
@@ -187,10 +179,14 @@
                     </div><!-- /.col-md-3 -->
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <div class="footer-widget subscribe-widget">
-                            <h3>Subscribe Today</h3>
-                            <p>Many of our SELC registered employees are requested as main</p>
+                            <h3>
+                                Inscritos hoje
+                            </h3>
+                            <p>
+                                coloque texto
+                            </p>
                             <form action="#" class="subscribe-form">
-                                <input type="text" placeholder="Email Address" />
+                                <input type="text" placeholder="E-mail Address" />
                                 <button type="submit" class="hvr-sweep-to-right">Subscribe</button>
                             </form><!-- /.subscribe-form -->
                         </div><!-- /.footer-widget subscribe-widget -->
@@ -296,7 +292,7 @@
 
     <script src="js/jquery.js"></script>
 
-    <script src="js/bootstrap.min.js"></script>
+    <script src="@Url.Content("~/js/bootstrap.min.js")"></script>
     <script src="js/bootstrap-select.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>

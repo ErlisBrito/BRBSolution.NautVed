@@ -1,0 +1,150 @@
+﻿@model DispararEmailViewModel
+@{
+    ViewData["Title"] = "Contatos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-wrapper">
+
+    <section class="contact-page sec-pad">
+        <div class="container">
+            <div class="sec-title text-center">
+                <h3>
+                    Entre em contato
+                </h3>
+                <p> Você vai encontrar trabalhando em uma verdadeira parceria 
+                que resultara em uma experiência incrível <br />
+                e um produto final que é o melhor que o esperado. </p>
+            </div><!-- /.sec-title text-center -->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="google-map"
+                         id="contact-page-google-map"
+                         data-map-lat="40.712784"
+                         data-map-lng="-74.005941"
+                         data-icon-path="img/map-marker.png"
+                         data-map-title="Brooklyn, New York, United Kingdom"
+                         data-map-zoom="11"
+                         data-markers='{
+                         "marker-1" : [40.712784,-74.005941, "<h4>Main Office</h4><p>Babylon Branch , Lindenhurst, UK</p>" ],
+                         "marker-2" : [40.728157, -74.077642, "<h4>Branch Office</h4> <p>291 Park Ave S, East Meadow, UK</p>" ]
+                         }'>
+                        </div>
+                </div><!-- /.col-md-6 -->
+                <div class="col-md-6">
+                    @using (Html.BeginForm("DispararEmail", "Contact", FormMethod.Post, new { id = "frmContato", @class = "contact-form" }))
+                    {
+                        <h3>E-mail</h3>
+                        @Html.TextBoxFor(p => p.Nome, new { @placeholder = "Seu Nome" })
+
+                        @Html.TextBoxFor(p => p.Email, new { @placeholder = "Seu E-mail" })
+
+                        @Html.TextBoxFor(p => p.Endereco, new { @placeholder = "Sua Localização" })
+
+                        @Html.TextAreaFor(p => p.Mensagem, new { @placeholder = "Menssage" })
+
+                        <button type="submit" class="hvr-sweep-to-right">Enviar</button>
+                    }
+                </div><!-- /.col-md-6 -->
+            </div><!-- /.row -->
+        </div>
+    </section>
+
+
+    <section class="feature-style-one">
+        <div class="container">
+            <div class="clearfix">
+                <div class="col-md-4">
+                    <div class="single-feature-style-one">
+                        <div class="icon-box">
+                            <i class="industrio-icon-innovation"></i>
+                        </div><!-- /.icon-box -->
+                        <div class="text-box">
+                            <h3>Ideias Criativas</h3>
+                            <p>Coloque texto</p>
+                        </div><!-- /.text-box -->
+                    </div><!-- /.single-feature-style-one -->
+                </div><!-- /.col-md-4 -->
+                <div class="col-md-4">
+                    <div class="single-feature-style-one light">
+                        <div class="icon-box">
+                            <i class="industrio-icon-secure-shield"></i>
+                        </div><!-- /.icon-box -->
+                        <div class="text-box">
+                            <h3>Super Segurança</h3>
+                            <p>Coloque o Texto.</p>
+                        </div><!-- /.text-box -->
+                    </div><!-- /.single-feature-style-one -->
+                </div><!-- /.col-md-4 -->
+                <div class="col-md-4">
+                    <div class="single-feature-style-one light">
+                        <div class="icon-box">
+                            <i class="industrio-icon-support"></i>
+                        </div><!-- /.icon-box -->
+                        <div class="text-box">
+                            <h3>24/7 Suporte</h3>
+                            <p>Texto</p>
+                        </div><!-- /.text-box -->
+                    </div><!-- /.single-feature-style-one -->
+                </div><!-- /.col-md-4 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section><!-- /.feature-style-one -->
+
+    <section class="contact-info-style-one">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="title">
+                        <h3>
+                            Entre em contato
+                        </h3>
+                        <p>Texto.</p>
+                    </div><!-- /.title -->
+                </div><!-- /.col-md-7 -->
+                <div class="col-md-6">
+                    <div class="contact-infos">
+                        <div class="single-contact-infos">
+                            <div class="icon-box">
+                                <i class="industrio-icon-phone-call"></i>
+                            </div><!-- /.icon-box -->
+                            <div class="text-box">
+                                <h3>Telefone</h3>
+                                <p>222-121-4562</p>
+                            </div><!-- /.text-box -->
+                        </div><!-- /.single-contact-infos -->
+                        <div class="single-contact-infos">
+                            <div class="icon-box">
+                                <i class="industrio-icon-envelope"></i>
+                            </div><!-- /.icon-box -->
+                            <div class="text-box">
+                                <h3>E-mail</h3>
+                                <p>support@gmail.com</p>
+                            </div><!-- /.text-box -->
+                        </div><!-- /.single-contact-infos -->
+                    </div><!-- /.contact-infos -->
+                </div><!-- /.col-md-5 -->
+            </div><!-- /.row -->
+        </div><!-- /.contianer -->
+    </section><!-- /.contact-info-style-one -->
+
+    <script src="js/jquery.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/isotope.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/custom.js"></script>
+
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTPlX-43R1TpcQUyWjFgiSfL_BiGxslZU"></script>
+    <!-- google map helper -->
+    <script src="js/gmaps.js"></script>
+    <script src="js/map-helper.js"></script>
+</div>
