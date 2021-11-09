@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewData["Title"] = "Projetos";
+    ViewData["Title"] = "Portifólio";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -35,15 +35,15 @@
 
     <div class="inner-banner">
         <div class="container">
-            <h3>Project Page</h3>
+            <h3>Portifólio</h3>
             <ul class="breadcumb">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="@Url.Action("Index","Home")">Home</a></li>
                 <!--
                 -->
                 <li><span class="sep"><i class="fa fa-angle-right"></i></span></li>
                 <!--
                 -->
-                <li><span>Project Page</span></li>
+                <li><span>Portifólio</span></li>
             </ul><!-- /.breadcumb -->
         </div><!-- /.container -->
     </div><!-- /.inner-banner -->
@@ -52,22 +52,22 @@
         <div class="container">
             <div class="gallery-filter">
                 <ul class="post-filter masonary text-center">
-                    <li class="filter active" data-filter=".masonary-item"><span><i class="industrio-icon-layers"></i>All Cases</span></li>
+                    <li class="filter active" data-filter=".masonary-item"><span>Todos</span></li>
                     <!--
                     -->
-                    <li class="filter " data-filter=".oil"><span><i class="industrio-icon-drop-of-liquid"></i>Oil & Gas</span></li>
+                    <li class="filter " data-filter=".oil"><span>Placas e Juntas</span></li>
                     <!--
                     -->
-                    <li class="filter " data-filter=".construction"><span><i class="industrio-icon-safety"></i>Construction</span></li>
+                    <li class="filter " data-filter=".construction"><span>Válvulas</span></li>
                     <!--
                     -->
-                    <li class="filter " data-filter=".chemical"><span><i class="industrio-icon-atom"></i>Chemicel</span></li>
+                    <li class="filter " data-filter=".chemical"><span>Rotores</span></li>
                     <!--
                     -->
-                    <li class="filter " data-filter=".industrial"><span><i class="industrio-icon-settings"></i>Industrial</span></li>
+                    <li class="filter " data-filter=".industrial"><span>Perfil de Silicone</span></li>
                     <!--
                     -->
-                    <li class="filter " data-filter=".agriculture"><span><i class="industrio-icon-scythe"></i>Agriculture</span></li>
+                    <li class="filter " data-filter=".agriculture"><span>Gaxetas Especiais</span></li>
                 </ul><!-- /.post-filter -->
             </div><!-- /.gallery-filter -->
             <div class="row masonary-layout filter-layout" data-filter-class="filter">
