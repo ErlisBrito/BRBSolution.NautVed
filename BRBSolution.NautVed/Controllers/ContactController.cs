@@ -12,6 +12,7 @@ namespace BRBSolution.NautVed.Controllers
 {
     public class ContactController : Controller
     {
+
         public IActionResult Index()
         {
             return View();
@@ -20,39 +21,50 @@ namespace BRBSolution.NautVed.Controllers
         [HttpPost]
         public IActionResult DispararEmail(DispararEmailViewModel dispararEmailViewModel)
         {
+            string enviarEmail = "erlisbrito@gmail.com";
+            string senha = "Veonc@270315";
 
-            SmtpClient client = new();
-            client.Host = "smtp.gmail.com";
-            client.EnableSsl = true;
-            client.Credentials = new NetworkCredential("erlisbrito@gmail.com", "Veonc@270315");
-            MailMessage mail = new();
-            mail.Sender = new MailAddress("erlisbrito@gmail.com", "Erlis");
-            mail.From = new MailAddress("erlisbrito@gmail.com", "Erlis");
-            mail.To.Add(new MailAddress("erlisbrito@gmail.com", "Erlis"));
+            SmtpClient client = new()
+            {
+                Host = "smtp.gmail.com",
+                Port = 587,
+                EnableSsl = true,
+                DeliveryMethod = SmtpDeliveryMethod.Network,
+                UseDefaultCredentials = false,
+                Credentials = new NetworkCredential(enviarEmail, senha)
+            };
+
+            //SmtpClient client = new SmtpClient();
+            //client.Host = "smtp.gmail.com";
+            //client.EnableSsl = true;
+            //client.Credentials = new NetworkCredential(enviarEmail, senha);
+            MailMessage mail = new()
+            {
+                Sender = new MailAddress(enviarEmail, senha),
+                From = new MailAddress(enviarEmail, "Roger")
+            };
+            mail.To.Add(new MailAddress(dispararEmailViewModel.Email, dispararEmailViewModel.Nome));
             mail.Subject = "Contato";
-            mail.Body = $" Mensagem do site:<br/> Nome:{dispararEmailViewModel.Nome} <br/> Email :{dispararEmailViewModel.Email} <br/> Mensagem :{dispararEmailViewModel.Mensagem}";
+            mail.Body = $" Olá {dispararEmailViewModel.Nome} recebemos o seu contato," +
+                $"e Logo um de nossos representantes entrará em contato com você!";
+                //$" Email : {dispararEmailViewModel.Email} " +
+                //$" Mensagem : {dispararEmailViewModel.Mensagem}";
             mail.IsBodyHtml = true;
             mail.Priority = MailPriority.High;
-            SmtpClient smtp = new();
-            smtp.Port = 587;
-            smtp.Host = "smtp.gmail.com"; //for gmail host  
-            smtp.EnableSsl = true;
-            smtp.UseDefaultCredentials = false;
-            smtp.Credentials = new NetworkCredential("FromMailAddress", "password");
-            smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
-            smtp.Send(message);
             try
             {
                 client.Send(mail);
             }
             catch (Exception ex)
             {
-                // tratar excessão aqui 
+                //trata erro
             }
             finally
             {
                 mail = null;
             }
+
+
             return View();
         }
 
