@@ -12,6 +12,7 @@ namespace BRBSolution.NautVed.Controllers
 {
     public class ContactController : Controller
     {
+
         public IActionResult Index()
         {
             return View();
@@ -28,7 +29,7 @@ namespace BRBSolution.NautVed.Controllers
             MailMessage mail = new();
             mail.Sender = new MailAddress("erlisbrito@gmail.com", "Erlis");
             mail.From = new MailAddress("erlisbrito@gmail.com", "Erlis");
-            mail.To.Add(new MailAddress("erlisbrito@gmail.com", "Erlis"));
+            mail.To.Add(new MailAddress($"{dispararEmailViewModel.Email},{dispararEmailViewModel.Nome}"));
             mail.Subject = "Contato";
             mail.Body = $" Mensagem do site:<br/> Nome:{dispararEmailViewModel.Nome} <br/> Email :{dispararEmailViewModel.Email} <br/> Mensagem :{dispararEmailViewModel.Mensagem}";
             mail.IsBodyHtml = true;
@@ -40,7 +41,7 @@ namespace BRBSolution.NautVed.Controllers
             smtp.UseDefaultCredentials = false;
             smtp.Credentials = new NetworkCredential("FromMailAddress", "password");
             smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
-            smtp.Send(message);
+           // smtp.Send(message);
             try
             {
                 client.Send(mail);
