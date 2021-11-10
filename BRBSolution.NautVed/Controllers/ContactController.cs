@@ -69,6 +69,11 @@ namespace BRBSolution.NautVed.Controllers
         }
 
 
+        public IActionResult Template()
+        {
+            return View();
+        }
+
         public bool ValidarEmail(string email)
         {
             Regex regex = new(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
